@@ -14,7 +14,7 @@
 
 Name:             avahi
 Version:          0.6.31
-Release:          1%{?dist}
+Release:          2%{?dist}
 Summary:          Local network service discovery
 License:          LGPLv2+
 URL:              http://avahi.org
@@ -347,7 +347,7 @@ NOCONFIGURE=1 ./autogen.sh
         --with-avahi-priv-access-group=avahi \
         --with-autoipd-user=avahi-autoipd \
         --with-autoipd-group=avahi-autoipd \
-        --with-systemdsystemunitdir=/lib/systemd/system \
+        --with-systemdsystemunitdir=%{_unitdir} \
         --enable-introspection=no \
 %if %{WITH_COMPAT_DNSSD}
         --enable-compat-libdns_sd \
